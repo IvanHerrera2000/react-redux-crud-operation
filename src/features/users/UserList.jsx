@@ -21,7 +21,7 @@ function UserList() {
         </div>
         <div className="flex gap-4">
           {/* edit icon from heroicons */}
-          <Link to={`/users/${user.id}`}>
+          <Link to={`/edit-user/${user.id}`}>
             <button>
               <PencilIcon className="h-5 w-5" />
             </button>
