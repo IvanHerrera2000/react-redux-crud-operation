@@ -33,7 +33,7 @@ function UserList() {
 
   return (
     <div>
-      <Button children="Add User" />
+      <Button>Add User</Button>
       <div className="grid gap-5 md:grid-cols-2">
         {users.length ? (
           renderCard()
