@@ -1,5 +1,6 @@
 import React from 'react';
 import { TrashIcon, PencilIcon } from '@heroicons/react/outline';
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 
 function UserList() {
@@ -20,9 +21,11 @@ function UserList() {
         </div>
         <div className="flex gap-4">
           {/* edit icon from heroicons */}
-          <button>
-            <PencilIcon className="h-5 w-5" />
-          </button>
+          <Link to={`/users/${user.id}`}>
+            <button>
+              <PencilIcon className="h-5 w-5" />
+            </button>
+          </Link>
           {/* delete icon from heroicons */}
           <button>
             <TrashIcon className="h-5 w-5" />
@@ -33,7 +36,9 @@ function UserList() {
 
   return (
     <div>
-      <Button>Add User</Button>
+      <Link to="/add-user">
+        <Button>Add User</Button>
+      </Link>
       <div className="grid gap-5 md:grid-cols-2">
         {users.length ? (
           renderCard()
