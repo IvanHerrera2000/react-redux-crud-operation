@@ -1,5 +1,6 @@
 import React from 'react';
 import { TrashIcon, PencilIcon } from '@heroicons/react/outline';
+import Button from '../../components/Button';
 
 function UserList() {
   const users = [
@@ -31,14 +32,17 @@ function UserList() {
     ));
 
   return (
-    <div className="grid gap-5 md:grid-cols-2">
-      {users.length ? (
-        renderCard()
-      ) : (
-        <p className="text-center col-span-2 text-gray-700 font-semibold">
-          No User
-        </p>
-      )}
+    <div>
+      <Button children="Add User" />
+      <div className="grid gap-5 md:grid-cols-2">
+        {users.length ? (
+          renderCard()
+        ) : (
+          <p className="text-center col-span-2 text-gray-700 font-semibold">
+            No User
+          </p>
+        )}
+      </div>
     </div>
   );
 }
