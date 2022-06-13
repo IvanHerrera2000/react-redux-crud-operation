@@ -1,4 +1,5 @@
 import React from 'react';
+import { TrashIcon, PencilIcon } from '@heroicons/react/outline';
 
 function UserList() {
   const users = [
@@ -15,6 +16,16 @@ function UserList() {
         <div>
           <h3 className="font-bold text-lg text-black">{user.name}</h3>
           <span className="font-normal text-gray-600">{user.email}</span>
+        </div>
+        <div className="flex gap-4">
+          {/* edit icon from heroicons */}
+          <button>
+            <PencilIcon className="h-5 w-5" />
+          </button>
+          {/* delete icon from heroicons */}
+          <button>
+            <TrashIcon className="h-5 w-5" />
+          </button>
         </div>
       </div>
     ));
